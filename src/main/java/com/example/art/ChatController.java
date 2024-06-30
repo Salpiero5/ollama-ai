@@ -3,6 +3,7 @@ package com.example.art;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.ollama.OllamaChatModel;
+import org.springframework.ai.ollama.api.OllamaOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,6 +12,7 @@ import reactor.core.publisher.Flux;
 
 @RestController
 public class ChatController {
+
 
     private final OllamaChatModel chatModel;
 
@@ -21,13 +23,18 @@ public class ChatController {
 
     /**
      * Endpoint to generate text based on a given prompt.
+     *
      * @param prompt the input prompt to generate text
      * @return generated text response from the model
      */
     @GetMapping("/generateText")
     public String generateText(@RequestParam String prompt) {
-        // Call the model with the prompt and return the generated content
-        return chatModel.call(new Prompt(prompt)).getResult().getOutput().getContent();
+        // Call the model with the prompt and return the generated content()
+        return chatModel.call( new Prompt(
+                prompt,
+                OllamaOptions.create()
+                        .withModel("llama3")
+        )).getResult().getOutput().getContent();
     }
 
 
