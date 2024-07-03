@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class ChatApi {
@@ -35,7 +37,7 @@ public class ChatApi {
 
     // For testing purposes
     @GetMapping("/generateFaqs")
-    public Faq generateFaqs() {
+    public List<Faq> generateFaqs() {
         ProductInfo product = new ProductInfo();
         product.setProductType(ProductType.DIGITAL);
         product.setDelivery(Delivery.DELIVERED);

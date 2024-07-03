@@ -26,10 +26,10 @@ priority: 2
 question 3: till when can i return this item?
 priority: 1
 the assistant responds based on priority and product type mentioned in prompt and fill in the answers in answer field with only question and answer field in json format as
-{
+[{
 "question": ..
 "answer": ...
-}
+}]
 and if the question is about something else tell them you don't know and can't help, they should contact to Billie in json format as
 {
 "question": user prompt
