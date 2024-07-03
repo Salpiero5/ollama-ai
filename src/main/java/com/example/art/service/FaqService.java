@@ -24,10 +24,8 @@ public class FaqService {
 
     public List<Faq> generateRelatedFaq(ProductInfo productInfo) {
 
-        // TODO make the prompt better
-        String prompt = "Please give top 2 information related to "
-                + productInfo.getProductType().toString() +
-                " return items";
+        String prompt = "Please give top 2 information related to the "
+                + productInfo.getProductType().toString() + "and the delivery type" + productInfo.getDelivery().toString();
 
         // Use Ollama chat API to get the response (replace with your implementation)
         String response = chatModel.call(new Prompt(prompt,
@@ -35,7 +33,7 @@ public class FaqService {
                         .withModel("faqModel")
         )).getResult().getOutput().getContent();
 
-        System.out.println(response);
+        System.out.println("Response -> " + response);
 
         List<Faq> faqList;
         try {
