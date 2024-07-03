@@ -2,6 +2,8 @@ package com.example.art.view.controller;
 
 import com.example.art.model.Faq;
 import com.example.art.service.FaqService;
+import com.example.art.service.ProductGenerationService;
+import static java.lang.Boolean.TRUE;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,9 +20,15 @@ import java.util.List;
 public class IndexController {
 
     private final FaqService faqService;
+    private final ProductGenerationService productGenerationService;
 
     @GetMapping()
-    public String getIndex(Model model) {
+    public String getIndex(@RequestParam(required = false, name = "random") Boolean random, Model model) {
+        if (TRUE.equals(random)) {
+            model.addAttribute("productInfo", productGenerationService.getRandom());
+        } else {
+            model.addAttribute("productInfo", productGenerationService.getDefault());
+        }
         model.addAttribute("faqs", createFAQs());
         return "index";
     }

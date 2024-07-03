@@ -3519,13 +3519,13 @@
                                 <div class="fluid-grid__item u-1/5@screen-large-up u-pb--sm"
                                      data-test="order-item-1231231231000-item-image">
                                     <a class="product-image product-image--tile product-image--regular u-p--xs"
-                                       title="Bol Hackathon fun package"
+                                       th:title="${productInfo.title}"
                                        href="#"
                                        data-analytics-id="px_odp_prop6"
                                        data-analytics-value="Orderdetailpage:Product info" data-analytics-type="defer"
                                        data-test="order-item-1231231231000-product-image-link">
-                                        <img title="Bol Hackathon fun package"
-                                             alt="Bol Hackathon fun package"
+                                        <img th:title="${productInfo.title}"
+                                             th:alt="${productInfo.title}"
                                              src="/image/img.png"
                                              data-test="order-item-1231231231000-product-image"
                                              class="disable-pointer-events">
@@ -3534,10 +3534,10 @@
                                 <div class="fluid-grid__item u-4/5@screen-large-up"
                                      data-test="order-item-1231231231000-item-data">
                                     <a href="#"
-                                       title="Bol Hackathon fun package"
+                                       th:title="${productInfo.title}"
                                        class="product-title" data-test="order-item-1231231231000-product-title"
                                        data-analytics-id="px_odp_prop6"
-                                       data-analytics-value="Orderdetailpage:Product info" data-analytics-type="defer">Bol Hackathon fun package</a>
+                                       data-analytics-value="Orderdetailpage:Product info" data-analytics-type="defer" th:text="${productInfo.title}"></a>
 
 
                                     <p data-test="order-item-1231231231000-price">€0,01</p>
@@ -3548,7 +3548,7 @@
                                            data-test="order-item-1231231231000-seller-link"
                                            data-analytics-id="px_odp_prop6"
                                            data-analytics-value="Orderdetailpage:Seller" data-analytics-type="defer">
-                                            <span data-test="order-item-1231231231000-seller">Bol Hackathon B.V. </span>
+                                            <span data-test="order-item-1231231231000-seller" th:text="${productInfo.title + ' B.V.'}"></span>
                                         </a>
                                     </p>
 
@@ -3574,7 +3574,7 @@
 
 
                                     <p>
-                                        <span class="h-color-inform-text" data-test="order-item-1231231231000-status">Bezorgd</span>
+                                        <span class="h-color-inform-text" data-test="order-item-1231231231000-status" th:text="${productInfo.delivery}"></span>
                                     </p>
 
 
@@ -3972,74 +3972,6 @@
                                     <p>
                                         <span class="h-color-inform-text" data-test="order-item-1231231231003-status">Bezorgd</span>
                                     </p>
-
-
-                                    <div class="order-details__info-blocks"
-                                         data-test="order-item-1231231231003-info-blocks">
-                                        <div class="u-mb--xs" data-test="order-item-1231231231003-info-block-0">
-                                            <div class="expandable-panel expandable-panel--box h-bg-color-brand-module">
-                                                <div class="expandable-panel__item">
-                                                    <input type="checkbox" class="expandable-panel__checkbox"
-                                                           id="expandable-panel__checkbox-4326fcdc-dac1-4e6c-a358-57e2292fad17"
-                                                           checked=""
-                                                           data-analytics-id="px_odp_info_track_trace_toggle">
-                                                    <label for="expandable-panel__checkbox-4326fcdc-dac1-4e6c-a358-57e2292fad17"
-                                                           class="expandable-panel__header"
-                                                           data-test="expandable-panel-header">
-                                                        <span data-icon=""
-                                                              class="sb expandable-panel__icon is-closed"></span>
-                                                        <span data-icon=""
-                                                              class="sb expandable-panel__icon is-open"></span>
-                                                        <div class="fright">
-                                                            <svg version="1.1" viewBox="0 0 28 28" aria-label="PostNL"
-                                                                 role="img" class="svg-inline--bi bi-postnl bi-2x"
-                                                                 data-test="icon-postnl" focusable="false">
-                                                                <path fill="#B0B3B5"
-                                                                      d="M6.1 0c3.4 0 8.8 2.1 12.4 4.1 4 2.2 9.5 6.6 9.5 9.7 0 3.3-5.7 7.6-9.5 9.7-3.5 1.9-8.8 4.2-12.2 4.2-.9 0-1.7-.2-2.2-.5-2.7-1.5-4-8-4-13.4 0-2.7.3-5.6 1-8C1.7 3 2.7 1.1 4 .4 4.5.1 5.2 0 6.1 0"></path>
-                                                                <path fill="#FFF"
-                                                                      d="M4.5 1.3C2.3 2.5 1.1 8.1.9 12.9v1.8c.1 4.8 1.3 10.4 3.5 11.6 2.1 1.2 8-.6 13.5-3.6 4.7-2.6 9-6.5 9-8.9 0-2.3-4.4-6.4-9-8.9C13.7 2.5 9 .9 6.2.9c-.7 0-1.3.1-1.7.4"></path>
-                                                                <path fill="#ED8C00"
-                                                                      d="M18 4.9c-4.3-2.4-9-4-11.8-4-.7 0-1.3.1-1.7.4C2.3 2.5 1.1 8.1.9 12.9v1.8c.1 4.8 1.3 10.4 3.5 11.6 2.1 1.2 8-.6 13.5-3.6 4.7-2.6 9-6.5 9-8.9.1-2.3-4.2-6.4-8.9-8.9zM8.9 6.8c.1-.2.3-.3.4-.4.2.1.3.3.4.4v.1c.1.2-.1.3-.2.4h-.1-.1c-.1-.1-.2-.2-.4-.5 0 .1 0 .1 0 0zm.9 1.1v2.2s0 .1-.1.1h-.5c-.1 0-.1-.1-.1-.1V7.9v-.1h.7c-.1 0-.1 0 0 .1 0-.1 0 0 0 0zm-2.3 2c-.1-.3-.4-.9-.4-1.1-.1-.3-.1-.5.3-.7.1 0 .2-.1.3-.1.2 0 .3-.1.5-.1h.1c.1 0 .1.1.1.1l.3.9V9h-.4s-.1 0-.1-.1-.1-.3-.1-.4H7.8c-.1 0-.1.1-.1.2 0 0 .4 1.1.5 1.4v.1h-.5c-.1 0-.1 0-.1-.1-.1 0-.1-.1-.1-.2zm3.7 1.3c0 .1 0 .2-.1.2H7.7c-.1 0-.1 0-.1-.2v-.4c0-.1.1-.2.2-.2h3.3c.1 0 .2.1.2.2v.4zm.5-2.4c0 .2-.3.8-.4 1.1 0 .1-.1.1-.1.2 0 0 0 .1-.1.1h-.5-.1v-.1c.1-.3.5-1.4.5-1.4 0-.1 0-.2-.1-.2l-.2-.1h-.1c-.1.2-.1.3-.2.5 0 0 0 .1-.1.1h-.4-.1v-.1l.3-.9c0-.1.1-.1.2-.1h.1c.1 0 .3.1.4.1.1 0 .2.1.4.1.6.2.6.4.5.7zM22 16.2h-1v-2.3c0-.5-.2-.7-.6-.7-.1 0-.3.1-.5.2s-.3.2-.4.2v2.7h-1v-3.7c0-.1.1-.1.1-.1h.9v.3c.1-.1.3-.2.4-.2.3-.1.5-.2.8-.2.8 0 1.3.5 1.3 1.4v2.4zm1.9 0h-1v-5.7c.1 0 .6.4.8.6.1.2.2.4.2.6v4.5z"></path>
-                                                                <path fill="#292E86"
-                                                                      d="M10.3 14.3c0-.7-.4-1.1-.9-1.1s-.9.3-.9 1.1c0 .7.4 1.1.9 1.1s.9-.4.9-1.1m1.1 0c0 1.4-.9 2-2 2s-2-.7-2-2c0-1.4.9-2 2-2s2 .6 2 2m5.3-3c-.1 0-.7.3-.9.5-.1.1-.2.4-.2.6v2.5c0 1.1.6 1.4 1.3 1.4.4 0 .6-.1.8-.1l.1-.1v-.7s-.3.1-.5.1c-.3 0-.6-.2-.6-.7v-1.4h.9v-.7c0-.1-.1-.1-.1-.1h-.8v-1.3m-10.8 3c0-.5-.3-.9-1.1-.9h-.5v1.8h.5c1 0 1.1-.6 1.1-.9m-2.7-1.8c0-.1.1-.1.1-.1h1.5c1.4 0 2.2.9 2.2 2s-.8 1.9-2.2 1.9h-.5v1.8c-.1 0-.7-.4-.8-.6-.1-.1-.2-.4-.2-.6v-4.4m11.2 1.6c-.2-.1-.5-.2-.8-.3 0 0-.2-.1-.3-.1-.3-.1-.6-.1-.6-.3 0-.2.2-.3.5-.3s.8.1 1.4.3h.1v-.8c0-.1 0-.1-.1-.1-.2-.1-.7-.2-1.2-.2s-.9.1-1.2.3c-.3.2-.5.5-.5.9 0 .9.7 1 1.4 1.2h.1c.3.1.6.1.6.4 0 .1 0 .1-.1.2s-.2.1-.5.1c-.4 0-1.2-.2-1.5-.3v.9c0 .1 0 .1.1.1 0 0 .7.2 1.4.2 1.1 0 1.7-.4 1.7-1.3 0-.4-.2-.7-.5-.9"></path>
-                                                            </svg>
-                                                        </div>
-                                                        <strong class="is-closed">Bezorging</strong>
-                                                        <strong class="is-open">Bezorging</strong>
-                                                    </label>
-                                                    <div class="expandable-panel__body">
-                                                        <div data-test="order-info-1231231231003-delivery">
-
-
-                                                            <p class="u-nosp">Bezorgd | Op 06 juni 2024</p>
-
-
-                                                            <hr class="rule rule--dashed rule-thin u-mt--sm h-color-shading-light-gray">
-
-
-                                                            <p>Volg je bestelling:</p>
-
-
-                                                            <a href="https://postnl.nl/tracktrace/?B=3STUNM196488857&amp;P=3562LD&amp;D=NL&amp;T=C&amp;L=NL"
-                                                               target="_blank"
-                                                               data-analytics-id="px_odp_info_track_trace"
-                                                               data-test="link-order-info-1231231231003-delivery-1-0">
-                                                                <svg version="1.1" viewBox="0 0 14 14"
-                                                                     aria-hidden="true"
-                                                                     class="svg-inline--bi bi-location"
-                                                                     data-test="icon-location" focusable="false">
-                                                                    <path fill-rule="evenodd"
-                                                                          d="M2.716 5.2c0-2.32 1.92-4.2 4.286-4.2 2.367 0 4.286 1.88 4.286 4.2 0 2.32-4.286 7.8-4.286 7.8S2.716 7.52 2.716 5.2zm1.007 0c0 1.67 3.28 6.14 3.28 6.14s3.282-4.504 3.282-6.133c0-1.629-1.35-3.205-3.283-3.205-1.933 0-3.279 1.528-3.279 3.198zM7 6a1 1 0 110-2 1 1 0 010 2z"></path>
-                                                                </svg>
-                                                                3STUNM196488857</a>
-
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
@@ -4090,7 +4022,17 @@
                                                 display: block;
                                             }
                                         </style>
-                                        <h5 class="c-klExQU">Vragen over deze bestelling?</h5>
+                                        <div class="row">
+                                            <wsp-add-to-cart-application>
+                                                <span data-id="add-to-cart" data-bltgh="sfSNckGVX9qdQCIDEvpJGw.2_49.50.AddToCart">
+                                                    <a href="?random=true" role="button" class="ui-btn  ui-btn--buy ui-btn--block@screen-small js_floating_basket_btn js_btn_buy js_preventable_buy_action">
+                                                        NEW RANDOM ORDER INFORMATION
+                                                    </a>
+                                                    <script type="application/json" data-payload="" data-payload-id="add-to-cart-payload">{"item":{"globalId":"9200000130997605","offerUid":"24a12e0c-d823-4a2b-a225-3c85c8b12d67","retailerOfferId":"1001036148438285","retailer":{"name":"Gadgy B.V.","url":"/nl/nl/v/gadgy-b-v/1130981/?sellingOfferId\u003d2ecb61b843b54ca2cf4a942413f81c8c"}},"productTitle":"Gadgy Solar Hangende Oosterse Lantaarn 2st. - Solar Tuinverlichting op Zonneenergie – Led Buitenverlichting met Dag/Nacht Sensor - Tuinlantaarn - Brons - Metaal","config":{"urls":{"linkToBasket":"/nl/nl/basket/"},"endpoint":"/nl/rnwy/basket/","xsrfToken":"f21122b3-5ad4-40cd-bc44-a30363974bf6","language":"nl"},"labels":{"rosettext":{"openDeliveryTimePopupMessageText":"Toon meer informatie over levertijd","trySelectFree":"Probeer 30 dagen gratis","productAlreadyPresentText":"Dit artikel zit al in je winkelwagentje. Als je meerdere exemplaren wilt bestellen kun je dat doen via","continueOrdering":"Verder naar bestellen","productAlreadyPresentTextLink":"Bekijk/wijzig inhoud","technicalErrorTitle":"Onze excuses, helaas is er een technische fout opgetreden.","freeService":"Gratis","deliveryTimePopupMessageText":"\u003cp\u003e\u003cstrong\u003eLevertijd\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eWe doen er alles aan om dit artikel op tijd te bezorgen. Het is echter in een enkel geval mogelijk dat door omstandigheden de bezorging vertraagd is.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eBezorgopties\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eWe bieden verschillende opties aan voor het bezorgen of ophalen van je bestelling. Welke opties voor jouw bestelling beschikbaar zijn, zie je bij het afronden van de bestelling.\u003c/p\u003e\n","technicalErrorMessage":"Probeer het later nog eens.","continueShopping":"Verder winkelen","removeService":"Verwijderen","closeButton":"Sluiten","productRecommendationsTitle":"Vaak samen gekocht","productAdded":"Het artikel is toegevoegd aan je winkelwagen","closenessMessageReached":"Bestel nu en je bestelling wordt \u003cstrong\u003egratis verzonden!\u003c/strong\u003e","closenessMessageAlmostThere":"Bestel voor \u003cstrong\u003e€ {{amount}}\u003c/strong\u003e aan bol artikelen en je betaalt geen verzendkosten","or":"of","getSelect":"Kies voor Select","sellerUnknown":"Verkoop door partner van bol","productAlreadyPresent":"Dit artikel zit al in je winkelwagentje. Als je meerdere exemplaren wilt bestellen kun je dat doen via \u003ca href\u003d\"{{url}}\"\u003eBekijk/wijzig inhoud\u003c/a\u003e","closeDeliveryTimePopupMessageText":"Sluit meer informatie over levertijd","buyButton":"In winkelwagen","serviceRecommendationsTitle":"Bekijk de aanvulsuggesties en ga verder met bestellen","labelSoldBy":"Verkoop door:","perYear":"p.j.","selectOnlyText":"Slechts","continueOrderingFooter":"Bestellen","additionalServicesTitle":"Bekijk de aanvulsuggesties en ga verder met bestellen","sellingThroughBol":"Verkoop door bol","noticeText":"Wij wijzen u graag op het volgende"}},"forceIconOnly":false}</script>
+                                                </span>
+                                            </wsp-add-to-cart-application>
+                                        </div>
+                                        <h5 id="navigate-here" class="c-klExQU">Vragen over deze bestelling?</h5>
                                         <div th:each="faq : ${faqs}" class="accordion-item">
                                             <div class="accordion-header">
                                                 <svg class="accordion-dropdown-button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
