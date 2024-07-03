@@ -28,9 +28,8 @@ public class FaqService {
 
     public List<Faq> generateRelatedFaq(ProductInfo productInfo) {
 
-        String prompt = "Please give top 2 information related to "
-                + productInfo.getProductType().toString() +
-                " return items";
+        String prompt = "Please give top 2 information related to the "
+                + productInfo.getProductType().toString() + "and the delivery type" + productInfo.getDelivery().toString();
 
         // Use Ollama chat API to get the response (replace with your implementation)
         String response = chatModel.call(new Prompt(prompt,
@@ -39,6 +38,8 @@ public class FaqService {
         )).getResult().getOutput().getContent();
 
         List<Faq> faqList = null;
+
+        System.out.println("Response -> " + response);
 
         try {
             ObjectMapper mapper = new ObjectMapper();
