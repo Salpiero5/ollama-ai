@@ -1,0 +1,58 @@
+RETOURNEREN
+"question": "Hoe snel heb ik mijn geld terug na retourneren?"
+"answer": "We betalen je binnen uiterlijk 14 dagen na je retourmelding terug, tenzij je 't dan nog niet hebt teruggestuurd natuurlijk. Je ontvangt automatisch een e-mail van ons zodra je retour is verwerkt."
+
+"question": "Volgens de track & trace is mijn retour wel aangekomen, maar nog niet verwerkt."
+"answer": "Dan zijn we nog bezig met het verwerken. Heb je na 14 dagen nog geen e-mail ontvangen dat wij of onze partner je retour hebben verwerkt, neem dan contact op."
+
+"question": "Mijn retour is verwerkt, maar ik heb mijn geld nog niet terug."
+"answer": "Dit kan tot 5 werkdagen duren, afhankelijk van de betaalmethode. Als je met een cadeaubon hebt betaald staat het bedrag binnen 4 uur weer opgewaardeerd in je account. Bij achteraf betalen komt je factuur gelijk te vervallen. Duurt de terugbetaling langer dan 5 werkdagen, neem dan contact op met je bank."
+
+"question": "Heb ik een printer nodig om iets terug te kunnen sturen?"
+"answer": "Geen printer? Geen probleem! Je ontvangt een digitaal retourlabel, die een medewerker bij het pakketpunt vanaf je telefoon kan scannen. Lukt dit niet of verstuur je je pakket via de brievenbus? Schrijf dan het retouradres en -nummer op de doos."
+
+
+ORDER DETAILS
+"question": "Waar blijft mijn bestelling?"
+"answer": "Onderweg, wacht nog even af"
+
+"question": "Ik heb nog niet alle artikelen uit mijn bestelling ontvangen"
+"answer": "Het kan voorkomen dat we niet alles tegelijk bezorgen. Bijvoorbeeld als je meerdere stuks van 1 artikel hebt besteld, verzenden we die soms in twee keer.  Daarnaast versturen partners hun artikelen vaak zelf en deze ontvang je apart van bol.com artikelen. Check hierboven de actuele status van elk artikel uit je bestelling. Staat er dat je bestelling al bezorgd is, maar heb je nog niet alles ontvangen? Dan heeft je bestelling waarschijnlijk vertraging opgelopen. Onze ervaring is dat je bestelling binnen 1 werkdag alsnog bezorgd wordt, ook als er al bezorgd staat, wacht het dus nog 1 werkdag af. Check ook of de buren je pakket hebben aangenomen."
+
+"question": "Ik heb nog niet alle artikelen uit mijn bestelling ontvangen"
+"answer": "Het kan voorkomen dat we niet alles tegelijk bezorgen. Bijvoorbeeld als je meerdere stuks van 1 artikel hebt besteld, verzenden we die soms in twee keer.  Daarnaast versturen partners hun artikelen vaak zelf en deze ontvang je apart van bol.com artikelen. Check hierboven de actuele status van elk artikel uit je bestelling. Staat er dat je bestelling al bezorgd is, maar heb je nog niet alles ontvangen? Dan heeft je bestelling waarschijnlijk vertraging opgelopen. Onze ervaring is dat je bestelling binnen 1 werkdag alsnog bezorgd wordt, ook als er al bezorgd staat, wacht het dus nog 1 werkdag af. Check ook of de buren je pakket hebben aangenomen."
+
+
+OVERIGE
+"question": "Andere vraag"
+"answer": "Staat je vraag er niet tussen? Neem dan contact op."
+
+
+BETALINGEN
+"question": "Waarom krijg ik een betalingsherinnering als ik al betaald heb?"
+"answer": "Dan hebben de betalingsherinnering en de betaling elkaar gekruist. Je betaling wordt binnen 5 werkdagen automatisch verwerkt. Dat zie je daarna gelijk terug in je account. Je hoeft de herinnering dan niet meer te betalen."
+
+"question": "Kan ik een deel van mijn facturen betalen?"
+"answer": "Dat kan! Vink alleen de facturen die je wilt betalen aan."
+
+"question": "Waarom staat er geen btw op mijn factuur?"
+"answer": "Als je een artikel bij een partner van bol koopt, vind je een betaaloverzicht zonder btw in je account. Bol is namelijk niet de verkopende partij. Vraag om een factuur met btw bij de partner. Dit doe je via de knop ‘aanvragen bij partner’ op de factuurpagina. Je krijgt dat binnen 2 werkdagen een factuur met btw.\n\n\n**Tip:** Neem een zakelijk account, dan kun je makkelijker een BTW factuur opvragen."
+
+"question": "Waarom krijg ik meerdere facturen voor één bestelling?"
+"answer": "Je ontvangt per verzending een factuur. Zo hoef je, als je hebt gekozen om achteraf te betalen, pas te betalen wanneer we je artikel verzonden hebben."
+
+OVER BESTELLING
+"question": "Er staat dat dit is bezorgd, maar ik heb niks ontvangen"
+"answer": "Check eerst bij je buren of zij je bestelling voor je hebben aangenomen. Hebben je buren ook niks, wacht dan nog 1 werkdag af. Onze ervaring is dat je bestelling binnen 1 werkdag alsnog bezorgd wordt, ook als er al bezorgd staat."
+
+"question": "Wat moet ik doen als ik een beschadigd artikel ontvang?"
+"answer": "Vervelend dat je een kapot artikel hebt ontvangen. Meld het kapotte artikel aan als retour en stuur het terug, zodat je je geld terug krijgt. Je kan dan zelf opnieuw bestellen. Op deze manier heb je het snelst een onbeschadigd exemplaar in huis. Ruilen is helaas niet mogelijk."
+
+"question": "Mijn bestelling is niet compleet"
+"answer": "Het kan voorkomen dat we niet alles tegelijk bezorgen. Bijvoorbeeld als je meerdere stuks van 1 artikel hebt besteld, verzenden we die soms in twee keer.  Daarnaast versturen partners hun artikelen vaak zelf en deze ontvang je apart van bol.com artikelen. Check hierboven de actuele status van elk artikel uit je bestelling. Staat er dat je bestelling al bezorgd is, maar heb je nog niet alles ontvangen? Dan heeft je bestelling waarschijnlijk vertraging opgelopen. Onze ervaring is dat je bestelling binnen 1 werkdag alsnog bezorgd wordt, ook als er al bezorgd staat, wacht het dus nog 1 werkdag af. Check ook of de buren je pakket hebben aangenomen. Mis je een onderdeel van je artikel? Neem dan contact op."
+
+"question": "Waarom staat er geen BTW op mijn factuur?"
+"answer": "Wanneer je een artikel bij een partner van bol.com hebt gekocht, vind je een betaaloverzicht zonder btw in je account. Bol.com is namelijk niet de verkopende partij. Vraag om een factuur met btw bij de partner, deze ontvang je binnen 2 werkdagen. \n\n**Tip:** Neem een zakelijk account, dan kun je makkelijker een BTW factuur opvragen."
+
+"question": "Ik heb dit geretourneerd, wanneer krijg ik mijn geld terug?"
+"answer": "Check dan eerst of je je retour hebt aangemeld in je account. Heb je dat al gedaan, dan betalen wij je binnen uiterlijk 14 dagen terug. Tenzij je 't nog niet hebt teruggestuurd natuurlijk. Je ontvangt automatisch een e-mail van ons zodra je retour is verwerkt. Duurt het verwerken van je retour langer? Neem dan contact op."
