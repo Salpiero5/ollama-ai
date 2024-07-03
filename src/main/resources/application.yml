@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: art
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: llama3
+  thymeleaf:
+    prefix: classpath:/frontend/
+    suffix: .html
