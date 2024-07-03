@@ -1,26 +1,27 @@
 package com.example.art.view.api;
 
+import com.example.art.model.Delivery;
+import com.example.art.model.Faq;
+import com.example.art.model.ProductInfo;
+import com.example.art.model.ProductType;
+import com.example.art.service.FaqService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.ai.ollama.api.OllamaOptions;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Flux;
 
 @RestController
 @RequiredArgsConstructor
 public class ChatApi {
 
     private final OllamaChatModel chatModel;
+    private final FaqService faqService;
 
     /**
      * Endpoint to generate text based on a given prompt.
-     *
-     * @param prompt the input prompt to generate text
-     * @return generated text response from the model
      */
     @GetMapping("/generateText")
     public String generateText(@RequestParam String prompt) {
@@ -32,18 +33,27 @@ public class ChatApi {
         )).getResult().getOutput().getContent();
     }
 
+    // For testing purposes
+    @GetMapping("/generateFaqs")
+    public Faq generateFaqs() {
+        ProductInfo product = new ProductInfo();
+        product.setProductType(ProductType.DIGITAL);
+        product.setDelivery(Delivery.DELIVERED);
+        return faqService.generateRelatedFaq(product);
+    }
+
+
 
     /**
      * For This you may need to add flux dependency
      * Endpoint to generate a streaming response for a given message.
-     *
-     * @param message the input message to generate a response
-     * @return a Flux stream of ChatResponse containing the generated responses
      */
-    @GetMapping("/generateStream")
-    public Flux<ChatResponse> generateStream(@RequestParam(value = "message", defaultValue = "Tell me a joke") String message) {
-        // Create a prompt from the user message and return a stream of responses
-        Prompt prompt = new Prompt(message);
-        return chatModel.stream(prompt);
-    }
+//    @GetMapping("/generateStream")
+//    public Flux<ChatResponse> generateStream(@RequestParam(value = "message", defaultValue = "Tell me a joke") String message) {
+//        // Create a prompt from the user message and return a stream of responses
+//        Prompt prompt = new Prompt(message);
+//        return chatModel.stream(prompt);
+//    }
+
+
 }
