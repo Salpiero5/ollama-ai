@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.net.ConnectException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,18 +25,20 @@ public class IndexController {
 
     @GetMapping()
     public String getIndex(@RequestParam(required = false, name = "random") Boolean random, Model model) {
-        if (TRUE.equals(random)) {
-            model.addAttribute("productInfo", productGenerationService.getRandom());
-        } else {
-            model.addAttribute("productInfo", productGenerationService.getDefault());
+        var productInfo = TRUE.equals(random) ? productGenerationService.getRandom() : productGenerationService.getDefault();
+        var faqs = createFAQs();
+        try {
+            faqs = faqService.generateRelatedFaq(productInfo);
+        } catch (Exception e) {
+            // ignored
         }
-        model.addAttribute("faqs", createFAQs());
+        model.addAttribute("faqs", faqs);
+        model.addAttribute("productInfo", productInfo);
         return "index";
     }
 
     @GetMapping("test")
-    public String getTestModelInput(Model model) {
-        model.addAttribute("faqs", createFAQs());
+    public String getTestModelInput() {
         return "test";
     }
 
@@ -46,7 +49,6 @@ public class IndexController {
         return "test";
     }
 
-    // This must be replaced by actually calling the model and returning the faqs
     private List<Faq> createFAQs() {
         List<Faq> faqs = new ArrayList<>();
         faqs.add(new Faq("First question", "First answer"));
