@@ -9,3 +9,8 @@ spring:
   thymeleaf:
     prefix: classpath:/frontend/
     suffix: .html
+  web:
+    resources:
+      static-locations: classpath:/frontend/static/
+server:
+  port: 80
