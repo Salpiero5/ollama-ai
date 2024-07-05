@@ -1,0 +1,6 @@
+1) "Please give me 2 information related to the "
+                   + productInfo.getProductType().toString();
+
+2) "Please give me 3 information related to the "
+                   + productInfo.getProductType().toString() + "and the delivery type" + productInfo.getDelivery().toString()
+                   + "And no less than 3, exactly 3";

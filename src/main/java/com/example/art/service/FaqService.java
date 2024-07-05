@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class FaqService {
@@ -24,10 +25,10 @@ public class FaqService {
 
     public List<Faq> generateRelatedFaq(ProductInfo productInfo) {
 
-        String prompt = "Please give top 2 information related to the "
-                + productInfo.getProductType().toString() + "and the delivery type" + productInfo.getDelivery().toString();
+        String prompt = "Please give me 3 information related to the "
+                + productInfo.getProductType().toString() + "and the delivery type" + productInfo.getDelivery().toString()
+                + "And no less than 3, exactly 3";;
 
-        // Use Ollama chat API to get the response (replace with your implementation)
         String response = chatModel.call(new Prompt(prompt,
                 OllamaOptions.create()
                         .withModel("faqModel")
@@ -41,13 +42,22 @@ public class FaqService {
             faqList = mapper.readValue(response, new TypeReference<>() {
             });
         } catch (JsonProcessingException e) {
-            // Handle parsing error (optional)
             System.out.println(e.getMessage());
             return List.of(new Faq("How long is the return period for this item?", "Within 31 days you could return your order"),
                     new Faq("How long is the warranty period for this item?", "There is no warranty for this item unfortunately, please read the repair instructions"));
         }
 
-        return faqList;
+        return faqList.stream()
+                .map(faq -> {
+                    faq.setQuestion(toLowerCase(faq.getQuestion()));
+                    faq.setAnswer(toLowerCase(faq.getAnswer()));
+                    return faq;
+                })
+                .collect(Collectors.toList());
+    }
+
+    private String toLowerCase(String text) {
+        return text.toLowerCase();
     }
 
     public String generateText(@RequestParam String prompt) {
