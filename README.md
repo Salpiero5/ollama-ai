@@ -5,5 +5,5 @@ It is integrated with the local Ollama chat model api
 
 ### Please see `https://github.com/ollama/ollama?tab=readme-ov-file` to install Ollama client model locally
 ### After installation check `ollama --version`
-### Then ollama pull llama3
+### Then `ollama pull llama3`
 
