@@ -27,9 +27,7 @@ public class FaqService {
 
         String prompt = "Please give me 3 information related to the "
                 + productInfo.getProductType().toString() + "and the delivery type" + productInfo.getDelivery().toString()
-                + "And no less than 3, exactly 3";;
-
-
+                + "And no less than 3, exactly 3";
 
         String response = chatModel.call(new Prompt(prompt,
                 OllamaOptions.create()
@@ -50,10 +48,9 @@ public class FaqService {
         }
 
         return faqList.stream()
-                .map(faq -> {
+                .peek(faq -> {
                     faq.setQuestion(toLowerCase(faq.getQuestion()));
                     faq.setAnswer(toLowerCase(faq.getAnswer()));
-                    return faq;
                 })
                 .collect(Collectors.toList());
     }
