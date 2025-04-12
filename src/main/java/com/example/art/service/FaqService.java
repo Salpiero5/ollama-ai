@@ -29,6 +29,8 @@ public class FaqService {
                 + productInfo.getProductType().toString() + "and the delivery type" + productInfo.getDelivery().toString()
                 + "And no less than 3, exactly 3";;
 
+
+
         String response = chatModel.call(new Prompt(prompt,
                 OllamaOptions.create()
                         .withModel("faqModel")
